@@ -106,8 +106,9 @@ int main(int argc, char** argv)
     char ch = '/';
     Operation* oper = OperationFactory::createOperate(ch);
     oper->set_NumberA(1.2);
-    oper->set_NumberB(0);
+    oper->set_NumberB(2);
     double result = oper->GetResult();
     std::cout << "result = " << result << std::endl;
+    delete(oper);
     return 1; 
 }
