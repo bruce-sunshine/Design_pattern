@@ -1,0 +1,67 @@
+#include <iostream>
+
+using namespace std;
+
+class Person
+{
+public:
+    Person(){};
+    Person(string name):_name(name){};
+    virtual void Show()
+    {
+        cout << "装扮的" << _name << endl;
+    }
+private:
+    string _name;
+};
+
+class Finery: public Person
+{
+protected:
+    Person component;
+public:
+    void Decorate(Person comp)
+    {
+     component = comp;   
+    }
+public:
+    void Show()
+    {
+        component.Show();
+    }
+};
+
+class TShirt: public Finery
+{
+public:
+    void Show()
+    {
+        cout << "大T恤" <<endl;
+        Finery::Show();
+    }
+};
+
+class BigTrouser: public Finery
+{
+public:
+    void Show()
+    {
+        cout << "裤衩" <<endl;
+        Finery::Show();
+    }
+};
+
+int main()
+{
+    Person* pr = new Person("bruce");
+    TShirt* th = new TShirt();
+    BigTrouser* bt = new BigTrouser();
+    th->Decorate(*pr);
+    bt->Decorate(*th);
+    bt->Show();
+
+    delete bt;
+    delete th;
+    delete pr;
+    return 1;   
+}

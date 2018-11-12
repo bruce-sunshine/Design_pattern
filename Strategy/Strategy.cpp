@@ -87,6 +87,6 @@ int main()
     CashContext* cs_con = new CashContext('R');
     double total = cs_con->GetResult(money);
     cout << "Need to pay money is " << total << endl;
-    free(cs_con);
+    delete(cs_con);
     return 1;
 }
