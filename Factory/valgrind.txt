@@ -1,0 +1,15 @@
+==37301== Memcheck, a memory error detector
+==37301== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==37301== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==37301== Command: ./Factory
+==37301== Parent PID: 4104
+==37301== 
+==37301== 
+==37301== HEAP SUMMARY:
+==37301==     in use at exit: 0 bytes in 0 blocks
+==37301==   total heap usage: 3 allocs, 3 frees, 72,706 bytes allocated
+==37301== 
+==37301== All heap blocks were freed -- no leaks are possible
+==37301== 
+==37301== For counts of detected and suppressed errors, rerun with: -v
+==37301== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
